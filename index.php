@@ -18,7 +18,7 @@ class Movie
 {
     public $title;
     public $publish_year;
-    public $genre;
+    public array $genre;
 
     public Data $datas;
 
@@ -42,9 +42,9 @@ $dataMovie2 = new Data("110 min.", "color", "tape");
 $dataMovie3 = new Data("240 min.", "color", "DVD");
 
 
-$movie1 = new Movie("Zorro", "1998", "Action", $dataMovie1);
-$movie2 = new Movie("Fantaghiro'", "1995", "Fantasy", $dataMovie2);
-$movie3 = new Movie("Troy", "2011", "Drama", $dataMovie3);
+$movie1 = new Movie("Zorro", "1998", ["Action", "Drama"], $dataMovie1);
+$movie2 = new Movie("Fantaghiro'", "1995", ["Action", "Fantasy"], $dataMovie2);
+$movie3 = new Movie("Troy", "2011", ["Drama", "Old Movie"], $dataMovie3);
 
 
 var_dump($movie1, $movie2, $movie3);
